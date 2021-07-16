@@ -1,0 +1,20 @@
+# encoding: utf-8
+
+create_table "companies", force: :cascade do |t|
+  t.string   :name,               limit: 255, null: false
+  t.string   :default_image_path, limit: 255
+  t.timestamps
+end
+add_index :companies, :register_token, unique: true
+
+create_table "stacks", force: :cascade do |t|
+  t.string   :name,               limit: 255, null: false
+  t.string   :default_image_path, limit: 255
+  t.timestamps
+end
+
+create_table "company_stack_maps", force: :cascade do |t|
+  t.integer :department_id, null: false
+  t.integer :stack_id,      null: false
+  t.timestamps
+end
