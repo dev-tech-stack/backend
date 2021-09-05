@@ -4,3 +4,4 @@
 - rails db:create (初回DB作成時)
 - bin/schema_update.sh (ridgepole変更時)
 - http://0.0.0.0:3000/graphiql
+# backend
